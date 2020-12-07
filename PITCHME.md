@@ -218,22 +218,27 @@ Methods are inherited from `Collection`, with additions that use an index.
 
 
 ---
-A useful method:
+### Useful methods
 ```java code-noblend
 List<E> subList(int fromIndex, int toIndex)
 ```
+Is a method of `List`. It returns a **view** of part of the list.
++ Changes to the sublist are reflected in the original, and vice versa.
++ Changes to the structure of the original list (like size changes) make the view incorrect.
 
-Returns a **view** of part of the list.
-+ Changes to the sublist are reflected in the original.
-+ Changes to the original list make the view incorrect.
+---
 
-And a static method of class `Arrays`:
+### Useful methods
+
 ```java code-noblend
 <T> List<T> asList(T... a)
 ```
-Takes an array and returns a list **view** of the array.
+Is a static method of class `Arrays`.
+It takes an array and returns a list **view** of the array.
++ Changes to the array appear in the list, and vice versa.
++ The List cannot change in size.
 
-@css[fragment](`T...` can take an array, or an unbounded list of arguments.)
+Actually, `T...` can take an array or an unbounded list of arguments.
 
 
 
@@ -441,7 +446,7 @@ A double ended queue, with two main implementations:
 
 If you need something like this, read the docs!
 
-@css[fragment](Best is to google for example *"java doc 8 Deque"*.)
+@css[fragment](Best is to google for example *"java doc 11 Deque"*.)
 
 
 
